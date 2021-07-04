@@ -19,7 +19,7 @@ namespace BigSchool.Controllers
         {
             var upcommingCourses = _dbContext.Courses
                 .Include(c => c.Lecturer)
-                .Include(c => c.Category)
+                .Include(c => c.Category    )
                 .Where(c => c.DateTime > DateTime.Now);
             return View(upcommingCourses);
         }
